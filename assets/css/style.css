@@ -1,0 +1,299 @@
+/* -------------------------------------------------------------------------- */
+/*                              Estilos generales                             */
+/* -------------------------------------------------------------------------- */
+
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    margin: 0;
+    padding: 2rem 0 0 5.5rem;
+    font-family: 'Karla', sans-serif;
+    background-color: #eee;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+h1{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* 
+font-family: 'Cabin', sans-serif;
+ */
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Panel navbar                                */
+/* -------------------------------------------------------------------------- */
+.panel-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 86px;
+    height: 100%;
+    color: #eee;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    padding: 1.5rem 1.5rem 2rem;
+    transition: .5s;
+    z-index: 100;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                     Nav                                    */
+/* -------------------------------------------------------------------------- */
+.nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav-brand{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    /* justify-content: space-around; */
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nav_btn{
+    font-size: 1.5rem;
+    padding: .75rem;
+    cursor: pointer;
+}
+
+.nav_logo{
+    color: #fff;
+    font-weight: 600;
+    padding-left: .80rem;
+}
+
+.link{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: .75rem;
+    padding: 1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.link:hover{
+    color: #1b96f5;
+}
+
+.icon{
+    font-size: 1.25rem;
+}
+
+.link_name{
+    font-size: .975rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    user                                    */
+/* -------------------------------------------------------------------------- */
+
+.user{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    padding: .4rem;
+    font-family: 'Cabin', sans-serif;
+}
+.avatar{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 150px;
+    margin-left: 1px;
+    margin-right: 1rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                             Expandir Dashboard                             */
+/* -------------------------------------------------------------------------- */
+.expandir{
+    width: calc(86px + 9.25rem);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Link Activo                                */
+/* -------------------------------------------------------------------------- */
+.active{
+    color:#1b96f5
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Collapse menu                               */
+/* -------------------------------------------------------------------------- */
+.collapse{
+    grid-template-columns: 30px max-content 1fr;
+    
+}
+
+.collapse_link{
+    justify-self: flex-end;
+    transition: .4s;
+}
+
+.collapse_menu{
+    display: none;
+    padding: .75rem 2.25rem;
+    line-height: 2rem;
+    transition: ease .4s;
+  
+}
+
+.sublink{
+    color: #9ea8b1;
+    font-size: .975rem;
+    
+
+}
+
+.sublink:hover{
+    color: #fff;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Empujar body                                */
+/* -------------------------------------------------------------------------- */
+.push{
+    transform: translateX(60px);
+}
+/* -------------------------------------------------------------------------- */
+/*                               Mostrar submenu                              */
+/* -------------------------------------------------------------------------- */
+
+.showCollapse{
+    display: block;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Rotar Icono sublink                            */
+/* -------------------------------------------------------------------------- */
+.rotar{
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Contenedor                                 */
+/* -------------------------------------------------------------------------- */
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Inicio > Cards                               */
+/* -------------------------------------------------------------------------- */
+
+.inicio h1{
+    text-align: center;
+}
+
+.inicio a{
+    display: block;
+    margin: 0 auto 1.4rem;
+    text-align: center;
+}
+
+.cards{
+    margin: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Cabin', sans-serif;
+    
+}
+
+
+.card{
+    border: 2px solid #09203f;
+    box-shadow: 0px 0px 2px #09203f;
+    margin: 2rem;
+    border-radius: 12px;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.card h4{
+    font-size: 1.3rem;
+}
+
+.card p{
+    padding: 0 10px;
+}
+
+.btn-inicio{
+    width: 50%;
+    height: 3rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #09203f;
+    line-height: 3rem;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: ease-in-out .4s;
+
+}
+
+.btn-inicio:hover{
+    background-image: linear-gradient(to right, #09203f 0%, #537895 100%);
+}
+
+@media (max-width: 850px){
+    .cards{
+        margin: 2rem 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio h1{
+        font-size: 23px;
+    }
+
+    .btn-inicio{
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px){
+    .inicio h1 {
+        font-size: 20px;
+    }
+
+    .btn-inicio{
+        width: 100%;
+    }
+
+    .card h4{
+        font-size: 15px;
+    }
+
+    .card{
+        margin: 1rem;
+    }
+
+}
+
